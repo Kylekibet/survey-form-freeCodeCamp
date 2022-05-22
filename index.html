@@ -4,11 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Survey Form</title>
   </head>
   <body>
     <header>
-      <h1>freeCodeCamp Survey Form</h1>
+      <h1 id="title">
+        <span class="title-one">freeCodeCamp</span> <br />
+        <span> Survey Form</span>
+      </h1>
+      <p id="description">This is a Survey to see how awesome you are</p>
     </header>
+    <main>
+      <div id="form">
+        <form action="" id="survey-form">
+          <fieldset>
+            <label for="name">
+              Name <input type="text" placeholder="Enter your name"
+            /></label>
+            <label for="email">
+              Email <input type="email" placeholder="Enter your Email"
+            /></label>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>
