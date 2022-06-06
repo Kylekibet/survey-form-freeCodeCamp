@@ -13,19 +13,125 @@
         <span class="title-one">freeCodeCamp</span> <br />
         <span> Survey Form</span>
       </h1>
-      <p id="description">This is a Survey to see how awesome you are</p>
+      <p id="description">This is a Survey to show how awesome you are</p>
     </header>
     <main>
       <div id="form">
         <form action="" id="survey-form">
+          <!-- Primary details -->
           <fieldset>
-            <label for="name">
-              Name <input type="text" placeholder="Enter your name"
+            <label id="name-label" for="name">
+              Name <input required id="name" type="text" name="name" placeholder="Enter your name"
             /></label>
-            <label for="email">
-              Email <input type="email" placeholder="Enter your Email"
+            <label id="email-label" for="email">
+              Email
+              <input required id="email" type="email" placeholder="Enter your Email"
             /></label>
+            <label id="number-label" for="number">
+              Age
+              <input
+                id="number"
+                type="number"
+                placeholder="Age"
+                min="13"
+                max="200"
+            /></label>
+
+            <div id="for-radios">
+              <p>Gender</p>
+
+              <label class="gender" for="gender">
+                <input
+                  value="he/him"
+                  name="gender"
+                  id="male"
+                  class="inline"
+                  type="radio"
+                />
+                He/Him
+              </label>
+
+              <label class="gender" for="female">
+                <input
+                  value="she/her"
+                  name="gender"
+                  id="female"
+                  class="inline"
+                  type="radio"
+                />
+                She/Her
+              </label>
+
+              <label class="gender" for="not-say">
+                <input
+                  value="them/they/you"
+                  name="gender"
+                  id="male"
+                  class="inline"
+                  type="radio"
+                />
+                Them/They/You...
+              </label>
+              <p>Personality</p>
+              <label for="sanguine"><input class="inline" type="checkbox" name="personality" value="sanguine" id="sanguine"> Sanguine</label>
+              <label for="choleric"><input class="inline" type="checkbox" name="personality" value="choleric" id="choleric"> Choleric</label>
+              <label for="melancholic"><input class="inline" type="checkbox" name="personality" value="melancholic" id="melancholic"> Melancholic</label>
+              <label for="phlegmatic"><input class="inline" type="checkbox" name="personality" value="phlegmatic" id="phlegmatic"> Phlegmatic</label>
+              <p><span class="red">(</span> I don't know what they mean &#128516 <span class="red">)</span></p>
+            </div>
           </fieldset>
+          <!-- end Primary details -->
+
+          <!-- working status -->
+          <fieldset>
+            <label for="dropdown">
+              <p>What describes your current living status ?</p>
+              <select id="dropdown">
+                <option value="">(please select a option)</option>
+                <option value="student">Student</option>
+                <option value="employeed">Employeed</option>
+                <option value="unemployed">Unemployeed</option>
+                <option value="private">Private</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+          </fieldset>
+          <!-- end Working Status -->
+
+          <!-- Does he/she/x code -->
+          <fieldset>
+            <p>Do you like coding</p>
+
+            <label for="does-code">
+              <input name="does-code" value="yes" class="inline" type="radio" checked /> Yes
+            </label>
+
+            <label for="">
+              <input name='does-code' value="no" class="inline" type="radio" disabled /> No
+            </label>
+          </fieldset>
+
+          <!-- end Does he/she/x code-->
+
+          <!-- Bio -->
+          <fieldset>
+            <label for="bio">
+              How would you describe your self
+              <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+            </label>
+          </fieldset>
+          <!-- end Bio -->
+
+          <!-- Submit -->
+          <fieldset>
+            <label for="terms">
+              <input value="terms" type="checkbox" class="inline" /> Just agree already
+            </label>
+            <label for="submit">
+              <input value="submit" type="submit" name="submit" placeholder="Submit" id="submit" />
+            </label>
+          </fieldset>
+          <!-- end Submit -->
         </form>
       </div>
     </main>
